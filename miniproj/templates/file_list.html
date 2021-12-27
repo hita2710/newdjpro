@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% block content_header %}
+    <h2>Files</h2>
+    <p>
+      <a href="{% url 'upload' %}" class="btn btn-primary">Upload file</a>
+    </p>
+  {% endblock %}
+  
+    <table class="table mb-0">
+        <thead>
+          <tr>
+            <th>Files</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for file in files %}
+            <tr>
+              <td>{{ file.filename }}</td>
+              <td>
+                <a href="{{ file.fileupl.url }}" class="btn btn-primary btn-sm" target="_blank">
+                  Download File
+                </a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+
+{% endblock %}
+
+
+{% block logout%}
+    <a class="nav-link" href="{% url 'logout' %}">Log out</a>
+{% endblock %}

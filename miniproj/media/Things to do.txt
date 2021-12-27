@@ -1,0 +1,4 @@
+1.creating a site for groceries(showing the image and calculating the total)
+2.creating your own website(based on your resume............  blog kind of thing)
+3.creating a google form kind of thingy
+4.items in the house(price ,date bought,specifications,if possible place bought)

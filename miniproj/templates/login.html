@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Login</h1>
+    <form action="{% url 'login'%}" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="username"><br>
+        <input type="password" name="password" placeholder="password"><br>
+        <input type="Submit">
+    </form>
+    <a href="{% url 'register' %}">Register First</a>
+
+    <div>
+        {% for msg in messages%}
+        <h3>{{msg}}</h3>
+        {% endfor %}
+    </div>    
+
+{% endblock %}
+
+{% block logout%}
+    <a class="nav-link" href="{% url 'logout' %}">Log out</a>
+{% endblock %}
